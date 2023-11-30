@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="description" content="Signal &amp; Communications Group web page" />
+    <meta name="keywords" content="Signal &amp; Communications Group, ENSEEIHT, IRIT" />
+    <meta name="author" content="Signal &amp; Communications Group" />
+    <link rel="shortcut icon" href="img/favicon_IRIT.ico" />
+    <link rel="stylesheet" type="text/css" href="style_sc.css" media="screen,projection" title="style_sc"/>
+    <link rel="alternate stylesheet" type="text/css" href="print.css" media="screen,projection,print" title="style_print"/>
+    <title>Signal &amp; Communications Group @ IRIT</title>
+    <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js'></script>
+    <script type='text/javascript' src='leftfloat.js'></script>
+</head>
+
+<body>
+
+<script type="text/javascript" src="http://www.google.com/jsapi?key=NULL"></script>
+<script type="text/javascript">
+/* Loads the Google data JavaScript client library */
+google.load("gdata", "2.x");
+</script>
+
+<div id="wrap">
+
+    <div id="header">
+        <h1><a href="index.html">Signal &amp; Communications Group</a></h1>
+                <h2><a href="http://www.irit.fr/">Institut de Recherche en Informatique de Toulouse</a> (IRIT)<br/>
+        <a href="http://en.univ-toulouse.fr/">University of Toulouse</a>, France</h2>
+    </div>
+
+    <img id="frontphoto" src="img/IRIT_band.png" width="760" height="135" alt="" />
+
+    <div id="leftside">
+        <h2 class="hide">Menu:</h2>
+
+        <ul class="avmenu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="people.html">People</a></li>
+            <li><a href="research.html">Research</a></li>
+			<li><a href="fundings.html">Fundings</a></li>
+            <li><a href="publis.html">Publications</a></li>
+            <li><a href="collaborations.html">Collaborations</a></li>
+            <li><a href="positions.html">Open positions</a></li>
+            <li><a href="news.html">Press review</a></li>
+            <!--<li><a href="seminars.html">Seminars</a></li>-->
+            <li><a class="current" href="agenda.html">Agenda</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="iati/index.html">IATI &#64; N7 (fr)</a></li>
+        </ul>
+    </div>
+
+    <div id="contentwide">
+        <h2>Agenda</h2>
+        <p></p>
+
+<!--<iframe src="https://www.google.com/calendar/embed?mode=AGENDA&amp;showTitle=0&amp;height=600&amp;wkst=2&amp;bgcolor=%23FFFFFF&amp;src=scgroup.irit%40gmail.com&amp;color=%232952A3&amp;src=2f340r93rgrt5e1arb1v459rog%40group.calendar.google.com&amp;color=%23875509&amp;
+src=imagetrimester.cimi%40gmail.com&amp;color=%23875509&amp;ctz=Europe%2FParis" style=" border-width:0 " width="100%" height="600" frameborder="0" scrolling="no"></iframe>-->
+
+
+<ul id="events-upcoming">
+</ul>
+<ul id="events-past">
+</ul>
+
+<script type="text/javascript">
+     function new_window(titleString, descriptionString,dateString,hourString,locationString) {
+        msg = window.open("","msg","height=620,width=1000,left=180,top=180,scrollbars=1");
+        msg.document.write("<html><title>Signal & Communications Group @ IRIT</title>");
+        msg.document.write("<link rel='stylesheet' type='text/css' href='style_sc_pop.css' title='Variant Light' media='screen,projection' />");
+        msg.document.write("<body onblur=window.close()>");
+        descriptionString = descriptionString.replace(/(\n)/gm,"<br/>");
+        msg.document.write("<div id='title'>" + titleString + "</div>");
+        msg.document.write("<div id='date'>" + dateString  + "</div>");
+        msg.document.write("<div id='location'>" + locationString + "</div>");
+        msg.document.write("<div id='description'>" + descriptionString + "</div>");
+        msg.document.write("</body></html>");
+    }
+</script>
+
+
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="format-google-calendar.js"></script>
+    <script>
+      formatGoogleCalendar.init({
+        calendarUrl: 'https://www.googleapis.com/calendar/v3/calendars/scgroup.irit@gmail.com/events?key=AIzaSyBXx-_AD-kSg43u3yo2a5jogi6tZa5hZpc',
+        past: true,
+        upcoming: true,
+        pastTopN: 260,
+        upcomingTopN: 10,
+        itemsTagName: 'li',
+        upcomingSelector: '#events-upcoming',
+        pastSelector: '#events-past',
+        upcomingHeading: '<h3>Upcoming events</h3>',
+        pastHeading: '<h3>Past events</h3>',
+
+       <!-- format: ['<strong>', '*date*', '</strong>: ', '*summary*', '<br/> &mdash; ', '*description*', ' in ', '*location*']-->
+       <!-- format: ['*date*', ': ', ': <strong>', '*summary*', '</strong><br/> ', '*description*']-->
+       format: ['*summary*', '<br/>', '*date*', ' -- ',  '*location*',  '*description*']
+      });
+    </script>
+
+
+        <br/>
+    </div>
+    <div id="footer">
+        <p><span>&copy; 2017 <a href="#">Signal &amp; Communications Group @ IRIT</a></span>
+        <br/>
+        Webmaster: <a href="http://www.enseeiht.fr/~dobigeon/">Nicolas Dobigeon</a> <br/> <a href="http://andreasviklund.com/templates/" title="Original CSS template design">Original design</a> by <a href="http://andreasviklund.com/" title="Andreas Viklund">Andreas Viklund</a></p>
+    </div>
+
+
+</div>
+</body>
+</html>
